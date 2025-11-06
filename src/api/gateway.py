@@ -1,3 +1,5 @@
+from src.modules.ocr_engine import ocr_processor
+from src.modules.prompt_enhancer import prompt_engine
 from fastapi import FastAPI, UploadFile, File, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
