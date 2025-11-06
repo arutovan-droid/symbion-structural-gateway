@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  symbion-gateway:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+
+  # Для будущей интеграции с фронтендом
+  # frontend:
+  #   image: nginx:alpine
+  #   ports:
+  #     - "3000:80"
+  #   volumes:
+  #     - ./frontend:/usr/share/nginx/html
