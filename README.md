@@ -27,7 +27,3 @@ gateway = StructuralGateway()
 enhanced_prompt = gateway.enhance_document(
     "research_paper.pdf", 
     ai_provider="chatgpt"
-)
-
-# enhanced_prompt теперь содержит семантическую карту документа
-# и оптимизированный промпт для выбранного ИИ
